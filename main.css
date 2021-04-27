@@ -34,7 +34,7 @@ hr{
     background-color: #000000;  /* Set fill color of line */
 }
 h1 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
   padding-bottom: 9px;
   border-bottom: 1px solid #eee;
