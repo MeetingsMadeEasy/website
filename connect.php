@@ -5,7 +5,7 @@ function OpenCon()
  $dbusername = "root";
  $dbpassword = "";
  $dbname = "test";
- //create connection to database
+
  $conn = new mysqli($host, $dbusername, $dbpassword,$dbname) or die("Connect failed: %s\n". $conn -> error);
  
  return $conn;
