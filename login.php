@@ -9,7 +9,7 @@ if (!empty($username))
         $host = 'localhost';
         $dbusername = "root";
         $dbpassword = "";
-        $dbname = "MME";
+        $dbname = "mme";
         
     // create conection to database
     $conn = new mysqli ($host,$dbusername,$dbpassword,$dbname);
