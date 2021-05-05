@@ -18,3 +18,7 @@ session_start();
     
   </body>
 </html>
+//$username = filter_input(INPUT_POST,'username');
+        //$password = filter_input(INPUT_POST,'password');
+        //$email = filter_input(INPUT_POST, 'email');
+$sql = "INSERT INTO 'users' ('username','password','email') VALUES ('$username','$password','$email')";
