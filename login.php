@@ -28,6 +28,7 @@ if (!empty($username))
                 {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }
+            $conn->close();
             }
         }
     else 
