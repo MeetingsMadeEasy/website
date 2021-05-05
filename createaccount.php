@@ -9,7 +9,7 @@ $email = filter_input(INPUT_POST, 'email');
 $sql = "INSERT INTO `users` (`email`, `username`, `password`) VALUES ('$email','$username','$password')";
 if ($conn->query($sql))
 {
-echo "New record added!"
+echo "New record added!";
 
 }
 ?>
