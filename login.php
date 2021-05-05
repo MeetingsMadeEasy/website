@@ -1,45 +1,19 @@
 <?php
-
-$username = filter_input(INPUT_POST,'username')
-$password = filter_input(INPUT_POST,'password')
-if (!empty($username)) 
-{
-    if(!empty($password))
-        {
-        $host = 'localhost';
-        $dbusername = "root";
-        $dbpassword = "";
-        $dbname = "mme";
-        
-    // create conection to database
-    $conn = new mysqli ($host,$dbusername,$dbpassword,$dbname);
-        if (mysqli_connect_Error())
-            {
-                die('Connect Error ('. mysqli_connect_errno().')'.mysqli_connect_error());
-            }
-        else
-            {
-                $sql = "INSERT INTO account (username,password) values ('$username','$password')";
-                if ($conn->query($sql))
-                {
-                     echo "New record was succesffully inserted"
-                }
-                else
-                {
-                    echo "Error: " . $sql . "<br>" . $conn->error;
-                }
-            $conn->close();
-            }
-        }
-    else 
-        {
-        echo "Password should be empty";
-        die();
-        }
-}
-else{
-    echo "Username should not be empty";
-    die();
-}
-
+session_start();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <h1>Create a login for yourself! :></h1>
+  </head>
+  <body>
+    <form method = "post" action="login.php">
+    Username : <input type = "text" name = "username"><br><br>
+    Password : <input type = "password" name = "password"><br><br>
+    <input type ="submit" value = "Submit">
+    </form>
+    </script>
+    
+  </body>
+</html>
