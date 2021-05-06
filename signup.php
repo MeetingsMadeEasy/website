@@ -19,7 +19,4 @@ elseif($conn->connect_error)
     echo('Could not connect to database');
     die();
 }
-    
-
-
 ?>
