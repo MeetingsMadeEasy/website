@@ -1,25 +1,25 @@
 <?php
 
+session_start();
+
 include'connect.php';
 $conn = OpenCon();
 
 if(isset($_POST['submitButton'])){
-	$email = $_POST['email'];
-	$pass = $_POST['password'];
+	//$email = $_POST['email'];
+	//$pass = $_POST['password'];
+    $username = filter_input(INPUT_POST,'username');
+    $password = filter_input(INPUT_POST,'password');
 
-	//$email = stripcslashes($email);  
-    //$pass = stripcslashes($pass);  
-    //$email = mysqli_real_escape_string($conn, $email);  
-    //$pass = mysqli_real_escape_string($conn, $pass);
-    echo $email;
-    echo $pass;
-    $sql = "SELECT *from users where email = '$email' and password = '$pass'";  
+    echo $username;
+    echo $password;
+    $sql = "SELECT *from users where username = '$username' and password = '$password'";  
     $result = mysqli_query($conn, $sql);  
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
     $count = mysqli_num_rows($result); 
 
     if($count == 1){
-    	$_SESSION['email'] = $email;
+    	$_SESSION['username'] = $username;
         echo "LOGIN SUCCESSFUL";
         //echo $row['first_name'];
     header("Location:homepage.html");
