@@ -7,11 +7,11 @@ if(isset($_POST['submitButton'])){
 	$email = $_POST['email'];
 	$pass = $_POST['password'];
 
-	$email = stripcslashes($email);  
-    $pass = stripcslashes($pass);  
-    $email = mysqli_real_escape_string($conn, $email);  
-    $pass = mysqli_real_escape_string($conn, $pass);
-
+	//$email = stripcslashes($email);  
+    //$pass = stripcslashes($pass);  
+    //$email = mysqli_real_escape_string($conn, $email);  
+    //$pass = mysqli_real_escape_string($conn, $pass);
+    echo ($email);
     $sql = "SELECT *from users where email = '$email' and pass_word = '$pass'";  
     $result = mysqli_query($conn, $sql);  
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
