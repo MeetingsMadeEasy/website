@@ -1,2 +1,2 @@
 # MME-website
-this portion of code is for web page content ONLY
+This is code for our web based automated Zoom launcher! :)
