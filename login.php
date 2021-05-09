@@ -11,8 +11,6 @@ if(isset($_POST['Login'])){
     $username = filter_input(INPUT_POST,'username');
     $password = filter_input(INPUT_POST,'password');
 
-    echo $username;
-    echo $password;
     $sql = "SELECT *from users where username = '$username' and password = '$password'";  
     $result = mysqli_query($conn, $sql);  
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
@@ -20,15 +18,12 @@ if(isset($_POST['Login'])){
 
     if($count == 1){
     	$_SESSION['username'] = $username;
-        echo "LOGIN SUCCESSFUL";
-        //echo $row['first_name'];
-    header("Location:homepage.html");
+        header("Location:homepage.html");
     }
     else
     {
-    	echo "Login failed. Invalid username or password";
-        //echo "<script>setTimeout(\"location.href = 'login.php';\", 3000); </script>";
-        exit();
+    	echo "Login failed. Invalid username or password. Try Again?";
+        header("Location.login.html");
     }
 }
 
