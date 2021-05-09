@@ -12,7 +12,7 @@ if(isset($_POST['submitButton'])){
     //$email = mysqli_real_escape_string($conn, $email);  
     //$pass = mysqli_real_escape_string($conn, $pass);
     echo ($email);
-    $sql = "SELECT *from users where email = '$email' and pass_word = '$pass'";  
+    $sql = "SELECT *from users where email = '$email' and password = '$pass'";  
     $result = mysqli_query($conn, $sql);  
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
     $count = mysqli_num_rows($result); 
