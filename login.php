@@ -11,7 +11,8 @@ if(isset($_POST['submitButton'])){
     //$pass = stripcslashes($pass);  
     //$email = mysqli_real_escape_string($conn, $email);  
     //$pass = mysqli_real_escape_string($conn, $pass);
-    echo ($email);
+    echo $email;
+    echo $pass;
     $sql = "SELECT *from users where email = '$email' and password = '$pass'";  
     $result = mysqli_query($conn, $sql);  
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
@@ -19,14 +20,14 @@ if(isset($_POST['submitButton'])){
 
     if($count == 1){
     	$_SESSION['email'] = $email;
-        echo("LOGIN SUCCESSFUL");
+        echo "LOGIN SUCCESSFUL";
         //echo $row['first_name'];
     header("Location:homepage.html");
     }
     else
     {
     	echo "Login failed. Invalid username or password";
-        echo "<script>setTimeout(\"location.href = 'login.php';\", 3000); </script>";
+        //echo "<script>setTimeout(\"location.href = 'login.php';\", 3000); </script>";
         exit();
     }
 }
