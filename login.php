@@ -5,7 +5,7 @@ session_start();
 include'connect.php';
 $conn = OpenCon();
 
-if(isset($_POST['submitButton'])){
+if(isset($_POST['Login'])){
 	//$email = $_POST['email'];
 	//$pass = $_POST['password'];
     $username = filter_input(INPUT_POST,'username');
