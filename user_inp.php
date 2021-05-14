@@ -17,6 +17,6 @@ echo "Could not connect to database";
 die();
 }
 else{
- echo "hi";  
+ echo "did not work";  
 }
 ?>
