@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form method="post">
+    <form action = "user_inp.php" method = "post">
         <h1>Meeting Info Form</h1>
         <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
         <section>
@@ -18,25 +18,21 @@
                 <span>Meeting Name: </span>
                 <strong><abbr title="required">*</abbr></strong>
               </label>
-              <input type="text" id="name" name="ZoomUser">
+              <input type="text" name="ZoomUser">
             </p>
             <p>
               <label for="id">
                 <span>Meeting ID: </span>
                 <strong><abbr title="required">*</abbr></strong>
               </label>
-              <input type="text" id="meetid" name="meetingid">
+              <input type="text" name="meetingid">
             </p>
-
-    
-              
-
             <p>
               <label for="pwd">
-                <span>Password: </span>
-                <strong><abbr title="required">*</abbr></strong>
+                <span>Password (If not required,leave blank): </span>
+                
               </label>
-              <input type="password" id="pwd" name="password">
+              <input type="text"name="password">
             </p>
         </section>
         <section>
