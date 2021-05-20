@@ -6,8 +6,6 @@ include'connect.php';
 $conn = OpenCon();
 
 if(isset($_POST['Login'])){
-	//$email = $_POST['email'];
-	//$pass = $_POST['password'];
     $username = filter_input(INPUT_POST,'username');
     $password = filter_input(INPUT_POST,'password');
 
@@ -23,7 +21,7 @@ if(isset($_POST['Login'])){
     else
     {
     	echo "Login failed. Invalid username or password. Try Again?";
-        header("Location.login.html");
+        header("Location:login.html");
     }
 }
 ?>
