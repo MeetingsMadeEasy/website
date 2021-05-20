@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Meeting Info</title>
-    <link href="main.css" rel="stylesheet">
+    <link href = "style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -36,17 +36,15 @@
               <span>(If not required,leave blank)</span>
             </p>
         </section>
+        <h2>Scheduling</h2>
         <section>
-            <h2>Scheduling</h2>
+            
             <p>
               <label for="meeting">
-                <span>Meeting type:</span>
+                <br/><span>Meeting type:</span>
               </label>
-              <select id="card" name="usercard">
-                <option value="day">Daily</option>
-                <option value="multi">Multi</option>
-                <option value="week">Weekly</option>
-              </select>
+              <input type="text" id="type" name="meetType">
+              
             </p>
             
             <p>
@@ -55,7 +53,7 @@
                 <span>Last Day:</span>
                 <strong><abbr title="required">*</abbr></strong>
               </label>
-              <input type="date" id="date" name="expiration">
+              <input type="text" id="date" name="expiration">
             </p>
         </section>
         <p>
