@@ -21,7 +21,7 @@ if(isset($_POST['Login'])){
     else
     {
     	echo "Login failed. Invalid username or password. Try Again?";
-        header("Location:login.html");
+   
     }
 }
 ?>
