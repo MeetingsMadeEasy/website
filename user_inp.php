@@ -7,8 +7,8 @@ $MeetingID = filter_input(INPUT_POST,'meetingid');
 $MeetingPswd = filter_input(INPUT_POST,'password');
 $MeetingType = filter_input(INPUT_POST, 'meetType');
 $LastDay = filter_input(INPUT_POST,'last');
-$MeetingTime = filter_input(INPUT_POST,'time');
-$sql = "INSERT INTO `meetings`(`name`, `id`, `password`,`meeting_type`,`last_day`,`time`) VALUES ('$MeetingName','$MeetingID','$MeetingPswd','$MeetingType','$LastDay','$MeetingTime)";
+//$MeetingTime = filter_input(INPUT_POST,'time');
+$sql = "INSERT INTO `meetings`(`name`, `id`, `password`,`meeting_type`,`last_day`,`time`) VALUES ('$MeetingName','$MeetingID','$MeetingPswd','$MeetingType','$LastDay')";
 if ($conn->query($sql))
 {
 echo "New record added!";
